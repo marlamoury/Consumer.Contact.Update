@@ -2,12 +2,12 @@ using Consumer.Update.Contact.Infrastructure.Messaging;
 
 namespace Consumer.Contact.Update.Worker;
 
-public class Worker : BackgroundService
+public class RabbitWorker : BackgroundService
 {
-    private readonly ILogger<Worker> _logger;
+    private readonly ILogger<RabbitWorker> _logger;
     private readonly RabbitMQConsumer _consumer;
 
-    public Worker(ILogger<Worker> logger, RabbitMQConsumer consumer)
+    public RabbitWorker(ILogger<RabbitWorker> logger, RabbitMQConsumer consumer)
     {
         _logger = logger;
         _consumer = consumer;

@@ -14,6 +14,6 @@ namespace Consumer.Update.Contact.Domain.Entities
         public string Email { get; set; }
         public int Ddd { get; set; }
         public int Regiao { get; set; }
-        public DateTime DataHoraRegistro { get; set; } = DateTime.UtcNow;
+        public DateTime DataHoraRegistro { get; set; } = DateTime.Now;
     }
 }

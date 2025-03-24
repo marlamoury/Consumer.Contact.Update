@@ -20,7 +20,7 @@ namespace Consumer.Contact.Update.Infrastructure.Persistence
         public async Task UpdateContatoAsync(Contato contato)
         {
             // Atualizar a data de atualização antes de salvar
-            contato.DataHoraRegistro = DateTime.UtcNow;
+            contato.DataHoraRegistro = DateTime.Now;
 
             const string query = @"
         UPDATE contatos 

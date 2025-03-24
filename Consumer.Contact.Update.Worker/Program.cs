@@ -22,7 +22,7 @@ IHost host = Host.CreateDefaultBuilder(args)
 
         // Registrando o RabbitMQConsumer como Singleton e o Worker como HostedService
         services.AddSingleton<RabbitMQConsumer>();
-        services.AddHostedService<Worker>();
+        services.AddHostedService<RabbitWorker>();
     })
     .ConfigureLogging(logging =>
     {
